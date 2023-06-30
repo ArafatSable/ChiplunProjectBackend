@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 require("dotenv").config();
 
-const port=process.env.BASEURL;
+const port=process.env.BASEURL || 5000;
 app.get('/', async (req, res) => {
     console.log("THis is home page")
     res.send("This is home page")
